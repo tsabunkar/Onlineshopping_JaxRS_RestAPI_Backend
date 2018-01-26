@@ -12,8 +12,21 @@ public class Product {
 	private int  productRating;
 	private String   productImage;
 	
+	public Product() {
+		
+	}
 	
-	
+	public Product(int productId, String productName, String productCode, String productAvaliableDate, int price,
+			int productRating, String productImage) {
+		super();
+		this.productId = productId;
+		this.productName = productName;
+		this.productCode = productCode;
+		this.productAvaliableDate = productAvaliableDate;
+		this.price = price;
+		this.productRating = productRating;
+		this.productImage = productImage;
+	}
 	public int getProductId() {
 		return productId;
 	}
