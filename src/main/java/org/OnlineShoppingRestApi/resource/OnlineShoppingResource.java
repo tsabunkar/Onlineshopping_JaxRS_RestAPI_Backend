@@ -47,7 +47,7 @@ public class OnlineShoppingResource {
 	@GET
 	@Path("/{productId}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Product getParticularMessage(@PathParam("productId") int id)
+	public Product getParticularProduct(@PathParam("productId") int id)
 			throws NumberFormatException, ClassNotFoundException, SQLException {
 		
 		Product product =  prodRepo.getParticularProd(id);
@@ -89,7 +89,7 @@ public class OnlineShoppingResource {
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Path("/{productId}")
-	public String updateExistingMessage(@PathParam("productId") int id, Product prodWithOutIdProp)
+	public String updateExistingProduct(@PathParam("productId") int id, Product prodWithOutIdProp)
 			throws ClassNotFoundException, SQLException {
 		System.out.println("id value is "+id);
 		ProductRepoistry prodReop = 	new ProductRepoistryImple(); 
